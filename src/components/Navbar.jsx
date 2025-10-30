@@ -17,12 +17,7 @@ const NavMenu = (toggleMobileMenu) => {
     <ul className="flex flex-col md:flex-row items-center gap-8 capitalize">
       {navMenuItems.map((navMenuItem, index) => (
         <li key={index} onClick={toggleMobileMenu}>
-          <NavLink
-            to={navMenuItem.path}
-            className={({ isActive }) =>
-              isActive ? "text-primary font-bold" : "hover:text-primary"
-            }
-          >
+          <NavLink to={navMenuItem.path} className={({ isActive }) => (isActive ? "text-primary font-bold" : "hover:text-primary")}>
             {navMenuItem.label}
           </NavLink>
         </li>
@@ -38,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <header>
+    <header className="fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out text-white">
       <nav className="max-w-screen-2xl container mx-auto flex justify-between items-center px-4 py-16">
         <div>
           <Link to={"/"} className="font-bold">
@@ -47,10 +42,7 @@ const Navbar = () => {
         </div>
 
         {/* mobile hamburger menu */}
-        <div
-          onClick={toggleMobileMenu}
-          className="text-2xl md:hidden cursor-pointer hover:text-primary"
-        >
+        <div onClick={toggleMobileMenu} className="text-2xl md:hidden cursor-pointer hover:text-primary">
           {isMenuOpen ? null : <HiMiniBars3 />}
         </div>
 
@@ -60,18 +52,20 @@ const Navbar = () => {
         </div>
 
         {/* mobile menus */}
-        <div className={`fixed top-0 left-0 bg-black/80 w-full h-screen flex flex-col items-center justify-center gap-8 transform transition ${isMenuOpen ? 'translate-x-0' : '-translate-full'} md:hidden`}>
-          <div 
-          onClick={toggleMobileMenu}
-          className="absolute top-8 right-6 text-xl text-white  cursor-pointer"><RiCloseLargeFill /></div>
-          <NavMenu toggleMobileMenu={toggleMobileMenu}/>
+        <div
+          className={`fixed top-0 left-0 bg-black/80 w-full h-screen flex flex-col items-center justify-center gap-8 transform transition ${
+            isMenuOpen ? "translate-x-0" : "-translate-full"
+          } md:hidden`}
+        >
+          <div onClick={toggleMobileMenu} className="absolute top-8 right-6 text-xl text-white  cursor-pointer">
+            <RiCloseLargeFill />
+          </div>
+          <NavMenu toggleMobileMenu={toggleMobileMenu} />
         </div>
 
         <div className="hidden md:block cursor-pointer relative">
           <FaBagShopping className="text-xl " />
-          <sup className="absolute top-0 -right-3 size-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">
-            0
-          </sup>
+          <sup className="absolute top-0 -right-3 size-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">0</sup>
         </div>
       </nav>
     </header>
