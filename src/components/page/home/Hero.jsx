@@ -22,6 +22,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* bottom blur */}
+      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-white via-transparent to-transparent blur-sm -mb-2"></div>
     </section>
   );
 };
