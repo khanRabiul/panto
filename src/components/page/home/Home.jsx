@@ -1,3 +1,4 @@
+import Products from "../shop/Products";
 import Hero from "./Hero";
 import WhyChoose from "./WhyChoose";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
     <>
       <Hero />
       <WhyChoose />
+      <Products hedline='Best Selling Product' />
     </>
   );
 };

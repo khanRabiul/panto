@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out ${isScrolled ? "bg-white shadow-md" : "bg-transparent text-white"}`}>
-      <nav className="max-w-screen-2xl container mx-auto flex justify-between items-center px-4 py-6">
+      <nav className="max-w-screen-2xl section-container flex justify-between items-center px-4 py-6">
         <div>
           <Link to={"/"} className="text-3xl font-bold">
             Panto.
