@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useState } from "react";
 import { FaBagShopping } from "react-icons/fa6";
 import { HiMiniBars3 } from "react-icons/hi2";
@@ -28,16 +29,30 @@ const NavMenu = (toggleMobileMenu) => {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const toggleMobileMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out text-white">
-      <nav className="max-w-screen-2xl container mx-auto flex justify-between items-center px-4 py-16">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out ${isScrolled ? "bg-white shadow-md" : "bg-transparent text-white"}`}>
+      <nav className="max-w-screen-2xl container mx-auto flex justify-between items-center px-4 py-6">
         <div>
-          <Link to={"/"} className="font-bold">
-            panto
+          <Link to={"/"} className="text-3xl font-bold">
+            Panto.
           </Link>
         </div>
 
