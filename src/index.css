@@ -4,10 +4,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme{
+@theme {
   --color-primary: #E58411;
   --color-secondary: #1E1E1E;
   --color-secondary-bg: #F7F7F7;
+  --font-poppins: "Poppins", sans-serif;
+}
 
-  --font-poppins:"Poppins", sans-serif;
+@layer components {
+  .section-container {
+    @apply max-w-screen-2xl container mx-auto flex justify-between items-center px-4 py-16
+  }
 }

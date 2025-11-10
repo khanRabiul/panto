@@ -1,9 +1,11 @@
 import Hero from "./Hero";
+import WhyChoose from "./WhyChoose";
 
 const HomePage = () => {
   return (
     <>
-    <Hero />
+      <Hero />
+      <WhyChoose />
     </>
   );
 };
