@@ -7,7 +7,7 @@ const HomePage = () => {
     <>
       <Hero />
       <WhyChoose />
-      <Products hedline='Best Selling Product' />
+      <Products hedline='Best Selling Product               ' />
     </>
   );
 };
