@@ -13,7 +13,7 @@ const navMenuItems = [
   { path: "/contact", label: "Contact" },
 ];
 
-const NavMenu = (toggleMobileMenu) => {
+const NavMenu = ({toggleMobileMenu}) => {
   return (
     <ul className="flex flex-col md:flex-row items-center gap-8 capitalize">
       {navMenuItems.map((navMenuItem, index) => (
@@ -44,7 +44,7 @@ const Navbar = () => {
       }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
