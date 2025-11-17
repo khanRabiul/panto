@@ -1,3 +1,4 @@
+import Footer from "../../Footer";
 import Products from "../shop/Products";
 import Exprience from "./Experience";
 import Hero from "./Hero";
