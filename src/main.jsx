@@ -8,6 +8,7 @@ import HomePage from "./components/page/home/Home";
 import AboutPage from "./components/page/about/AboutPage";
 import ContactPage from "./components/page/contact/ContactPage";
 import ShopPage from "./components/page/shop/ShopPage";
+import 'sweetalert2/dist/sweetalert2.min.css'
 
 const router = createBrowserRouter([
   {

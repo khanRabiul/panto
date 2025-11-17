@@ -1,10 +1,11 @@
+import { useContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { FaBagShopping } from "react-icons/fa6";
 import { HiMiniBars3 } from "react-icons/hi2";
-import { LiaTimesSolid } from "react-icons/lia";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 const navMenuItems = [
   { path: "/", label: "Furniture" },
@@ -47,6 +48,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+const {cartCount} = useContext(CartContext)
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out ${isScrolled ? "bg-white shadow-md dark:text-black" : "bg-transparent text-white"}`}>
       <nav className="max-w-screen-2xl section-container flex justify-between items-center px-4 py-6">
@@ -80,7 +83,7 @@ const Navbar = () => {
 
         <div className="hidden md:block cursor-pointer relative">
           <FaBagShopping className="text-xl " />
-          <sup className="absolute top-0 -right-3 size-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">0</sup>
+          <sup className="absolute top-0 -right-3 size-5 bg-primary text-white text-xs rounded-full flex items-center justify-center">{cartCount}</sup>
         </div>
       </nav>
     </header>
