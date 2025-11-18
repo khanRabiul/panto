@@ -1,16 +1,52 @@
-# React + Vite
+## Panto — Simple E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Panto is a clean and minimal e-commerce web app focused on selling furniture and home appliances.
+Built with React, Vite, and TailwindCSS v4, it features theming support, add-to-cart functionality, smooth sliders, and a modern UI.
 
-Currently, two official plugins are available:
+### ✨ Features
+🛒 Core
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add to Cart functionality
 
-## React Compiler
+Cart state management
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Product listing pages
 
-## Expanding the ESLint configuration
+### 🎨 UI / UX
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+TailwindCSS v4 styling
+
+Light/Dark theme support
+
+Product sliders using SwiperJS
+
+Alerts powered by SweetAlert
+
+Fast routing via React Router DOM
+
+### 🧰 Tech Stack
+
+React
+
+Vite
+
+TailwindCSS v4
+
+React Router DOM
+
+SwiperJS
+
+SweetAlert
+
+pnpm as package manager
+
+📦 Installation & Setup
+```bash
+Clone repository
+
+git clone https://github.com/khanRabiul/panto.git
+```
+### Live link
+```
+https://panto-kappa.vercel.app/
+```
